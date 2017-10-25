@@ -1,0 +1,5 @@
+api_v2:
+    path: /ping
+    methods: [GET]
+    defaults:
+        _controller: "api.controllers.v2.default:getStatusAction"

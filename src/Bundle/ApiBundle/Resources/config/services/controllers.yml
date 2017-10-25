@@ -1,0 +1,16 @@
+services:
+
+    api.controllers.homepage.default:
+        class: PengYue\UserValidation\Bundle\ApiBundle\Controller\homepage\DefaultController
+        arguments: []
+
+    api.controllers.v1.default:
+        class: PengYue\UserValidation\Bundle\ApiBundle\Controller\v1\DefaultController
+        arguments: []
+    api.controllers.v1.phone_number:
+            class: PengYue\UserValidation\Bundle\ApiBundle\Controller\v1\PhoneNumberController
+            arguments: []
+
+    api.controllers.v2.default:
+        class: PengYue\UserValidation\Bundle\ApiBundle\Controller\v2\DefaultController
+        arguments: []

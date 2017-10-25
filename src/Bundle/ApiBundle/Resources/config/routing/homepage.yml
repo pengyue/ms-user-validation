@@ -1,0 +1,6 @@
+homepage:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: "api.controllers.homepage.default:indexAction"
+

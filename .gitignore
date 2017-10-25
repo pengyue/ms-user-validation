@@ -1,0 +1,17 @@
+/build/
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitignore
+!/var/log
+/var/log/*
+!var/log/.gitignore
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitignore
+/vendor/
+/web/bundles/
+Homestead.yaml
+Vagrantfile
+.vagrant/
+.idea

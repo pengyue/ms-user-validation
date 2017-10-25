@@ -1,0 +1,4 @@
+services:
+    app.http_cache:
+        class:     Bundle\ApiBundle\Service\HttpCache
+        arguments: []

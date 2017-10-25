@@ -1,0 +1,69 @@
+{
+    "name": "pengyue/ms-user-validation",
+    "description": "User Validation Microservice (PHP)",
+    "type": "project",
+    "require": {
+        "symfony/symfony": "3.2",
+        "symfony/dependency-injection": "^3.2",
+        "symfony/config": "3.2",
+        "nelmio/cors-bundle": "^1.5",
+        "nelmio/api-doc-bundle": "^2.13",
+        "friendsofsymfony/rest-bundle": "^2.1",
+        "jms/serializer-bundle": "^1.4",
+        "willdurand/faker-bundle": "^1.3",
+        "giggsey/libphonenumber-for-php": "^8.4",
+        "sensio/distribution-bundle": "^5.0",
+        "sensio/framework-extra-bundle": "^3.0.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*",
+        "behat/behat": "3.*",
+        "whatthejeff/nyancat-phpunit-resultprinter": "1.*",
+        "laravel/homestead": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PengYue\\UserValidation\\App\\": "app/",
+            "PengYue\\UserValidation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PengYue\\UserValidation\\Behat\\": "features/",
+            "PengYue\\UserValidation\\": [
+                "tests/unit/",
+                "tests/integration/"
+            ]
+        }
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "public",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "branch-alias": null
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::defineDirectoryStructure",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Peng Yue",
+            "email": "p.yue@quidco.com"
+        }
+    ]
+}
