@@ -10,21 +10,22 @@ ENV APP_LOG errorlog
 RUN mkdir -p /app/vendor/ && \
     chown -R build:build /app/vendor/ && \
     mkdir -p /app/var/cache/ && \
-    chown -R build:build /app/var/cache/
+    mkdir -p /app/var/storage/ && \
+    mkdir -p /app/var/log/ && \
+    mkdir -p /app/var/sessions/ && \
+    chown -R build:build /app/var/ && \
+    chown -R build:build /app/bin/
 
 # Run composer install as user 'build' and clean up the cache
-#USER build
+USER build
 RUN composer install --no-interaction --no-ansi --no-progress --prefer-dist && composer clear-cache --no-ansi --quiet
 USER root
 
 # Fix permissions
 RUN chown -R root:root /app/vendor/ && \
     chmod -R go-w /app/vendor/ && \
-    chown -R www:www /app/var/cache/ && \
-    mkdir -p /app/var/storage/ && \
-    chown -R www:www /app/var/storage/ && \
-    chown -R www:www /app/var/cache/ && \
-    chown -R www:www /app/var/log/
+    chown -R www:www /app/var/ && \
+    chown -R www:www /app/bin/
 
 # Add custom startup script
 #COPY rc.local /etc/rc.local
