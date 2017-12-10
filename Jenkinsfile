@@ -27,7 +27,6 @@ node {
         stage ('Test') {
             // Run any testing suites
             sh "vendor/bin/phpunit --config phpunit.xml --printer PHPUnit_TextUI_ResultPrinter"
-            sh "vendor/bin/behat"
         }
 
         stage('docker build/push') {
