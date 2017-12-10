@@ -29,7 +29,7 @@ node {
             sh "vendor/bin/phpunit --config phpunit.xml --printer PHPUnit_TextUI_ResultPrinter"
         }
 
-        stage('docker build/push') {
+        stage('Docker Build & Push') {
              docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
                def app = docker.build("pengyue/ms-user-validation:${commit_id}", '.').push()
              }
