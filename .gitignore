@@ -15,3 +15,4 @@ Homestead.yaml
 Vagrantfile
 .vagrant/
 .idea
+.DS_Store
