@@ -3,9 +3,9 @@
     "description": "User Validation Microservice (PHP)",
     "type": "project",
     "require": {
-        "symfony/symfony": "3.2",
-        "symfony/dependency-injection": "^3.2",
-        "symfony/config": "3.2",
+        "symfony/symfony": "^3.4",
+        "symfony/dependency-injection": "^3.4",
+        "symfony/config": "^3.4",
         "nelmio/cors-bundle": "^1.5",
         "nelmio/api-doc-bundle": "^2.13",
         "friendsofsymfony/rest-bundle": "^2.1",
