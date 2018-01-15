@@ -6,8 +6,9 @@ node {
 
         stage ("Preparation & Checkout") {
             checkout scm
-            sh "git rev-parse --short HEAD > .git/commit-id"
-            commit_id = readFile('.git/commit-id').trim()
+            //sh "git rev-parse --short HEAD > .git/commit-id"
+            //commit_id = readFile('.git/commit-id').trim()
+            commit_id = "latest"
         }
 
         stage ("Build") {
@@ -30,7 +31,7 @@ node {
         }
 
         stage('Docker Build & Push') {
-             docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+             docker.withRegistry('https://index.docker.io/v1/', 'Dockerhub') {
                def app = docker.build("pengyue/ms-user-validation:${commit_id}", '.').push()
              }
         }
