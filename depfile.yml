@@ -1,0 +1,33 @@
+paths:
+  - ./src
+
+exclude_files:
+  - .*test.*
+
+layers:
+
+  - name: Command
+    collectors:
+      - type: className
+        regex: PengYue\\UserValidation\\Bundle\\ApiBundle\\Controller\\.*
+
+  - name: Model
+    collectors:
+      - type: className
+        regex:  PengYue\\UserValidation\\Bundle\\ApiBundle\\Model\\.*
+
+  - name: Service
+    collectors:
+      - type: className
+        regex: PengYue\\UserValidation\\Bundle\\ApiBundle\\Service\\.*
+
+ruleset:
+
+  Command:
+    - Model
+    - Service
+
+  Service:
+    - Model
+
+  Model:
