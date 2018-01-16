@@ -61,7 +61,7 @@ filter:
             - 'bin/*'
             - 'features/*'
             - 'tests/*'
-            - 'varF/*'
+            - 'var/*'
             - 'vendor/*'
 
 build_failure_conditions:

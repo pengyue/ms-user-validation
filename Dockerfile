@@ -84,7 +84,9 @@ RUN mkdir -p /app/vendor/ && \
     chown -R build:build /app/var/cache/ && \
     mkdir -p /app/var/logs/ && \
     chown -R build:build /app/var/logs/ && \
-    chown -R build:build /app/bin/
+    mkdir -p /app/var/storage/ && \
+    chown -R build:build /app/var/storage/ && \
+    chown -R build:build /app/bin/ && \
 
 # Run composer install as user 'build' and clean up the cache
 USER build
