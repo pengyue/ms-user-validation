@@ -61,7 +61,6 @@ node {
           // Run any testing suites
           sh "echo 'Running tests ...'"
           sh "vendor/bin/phpunit --config phpunit.xml --printer PHPUnit\\\\TextUI\\\\ResultPrinter"
-          sh "vendor/bin/behat"
         }
 
         milestone()
@@ -74,7 +73,6 @@ node {
 
         def currentDate = getCurrentDate()
         def deploy = canDeploy(currentDate)
-
 
         if (!deploy) {
            try {
