@@ -15,7 +15,7 @@ node {
     def commitId = "latest"
     def user = env.BUILD_USER_ID
 
-    def dockerRegistry = "pengyue/awin-reporttask"
+    def dockerRegistry = "pengyue/ms-user-validation"
     def version = 'latest'
     def projectName = "awin-report-task"
     def slackBaseUrl = "https://triplanteam.slack.com/services/hooks/jenkins-ci/"
