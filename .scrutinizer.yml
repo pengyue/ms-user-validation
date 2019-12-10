@@ -44,7 +44,7 @@ build:
     tests:
         override:
             -
-                command: './vendor/bin/phpunit --testsuite="unit" --coverage-clover=var/code-coverage/phpcov-unit.xml --printer PHPUnit_TextUI_ResultPrinter'
+                command: './vendor/bin/phpunit --testsuite="unit" --coverage-clover=var/code-coverage/phpcov-unit.xml --printer PHPUnit\\TextUI\\ResultPrinter'
                 coverage:
                     file: 'var/code-coverage/phpcov-unit.xml'
                     format: 'php-clover'
